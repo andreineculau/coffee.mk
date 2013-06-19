@@ -1,15 +1,36 @@
 #!/usr/bin/env bash
+set -e
 
 [ -d .coffee.mk ] || (
     git submodule add git://github.com/andreineculau/coffee.mk .coffee.mk
 )
 
+SYMLINK=(
+    "test/_utils.coffee"
+    "test/mocha.opts"
+    .npmignore
+    .travis.yml
+    testem.yml
+)
+
+for FILE in ${SYMLINK[*]}; do
+    [ -e $FILE ] || [ -L $FILE ] || (
+        DIR=`dirname $FILE`
+        mkdir -p $DIR
+        cd $DIR
+        REL=`python -c "import os.path; print os.path.relpath('.coffee.mk/$FILE', '$DIR')" `
+        ln -s "$REL" "`basename $FILE`"
+    )
+done
+
 COPY=(
+    "test/index.coffee"
     .gitignore
     bin
     LICENSE
     Makefile
     NOTICE
+    NOTICE2
     README.md
     index.coffee
     package.json
@@ -18,21 +39,9 @@ COPY=(
 )
 
 for FILE in ${COPY[*]}; do
-    [ -f $FILE ] || (
-        cp -R .coffee.mk/$FILE ./
-    )
-done
-
-SYMLINK=(
-    "test/mocha.opts"
-    "test/utils.coffee"
-    .npmignore
-    .travis.yml
-    testem.yml
-)
-
-for FILE in ${SYMLINK[*]}; do
-    [[ -f $FILE ]] || (
-        ln -s ".coffee.mk/$FILE" "$FILE"
+    [ -e $FILE ] || (
+        mkdir -p `dirname $FILE`
+        DIR=`dirname $FILE`
+        cp -R .coffee.mk/$FILE $DIR
     )
 done
