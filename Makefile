@@ -5,4 +5,4 @@
 force: ;
 
 # Custom
--include Makefile2
+-include custom.mk

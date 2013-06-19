@@ -20,8 +20,8 @@ SHOULD be self-explanatory
 
 ## Customization
 
-* create `Makefile2` with your custom make targets
-* create `test/_utils2.coffee` with your custom test utils
+* create `custom.mk` with your custom make targets
+* create `test/_utils.custom.coffee` with your custom test utils
 
 
 ## License

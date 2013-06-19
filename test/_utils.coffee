@@ -8,5 +8,5 @@ module.exports = {
   _
 }
 
-if fs.existsSync './_utils2.coffee'
-  _.merge module.exports, require './utils2'
+if fs.existsSync './_utils.custom.coffee'
+  _.merge module.exports, require './utils.custom.coffee'
