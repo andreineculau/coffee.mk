@@ -9,7 +9,7 @@ endef
 COFFEE := $(wildcard *.coffee bin/*.coffee src/**/*.coffee)
 JS := $(patsubst src%, lib%, $(COFFEE:.coffee=.js))
 
-# Phony
+# PHONY
 .PHONY: Makefile install clean lint all prepublish test tap testem
 
 all: $(JS)
