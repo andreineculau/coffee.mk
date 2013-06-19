@@ -9,7 +9,6 @@ SYMLINK=(
     "test/_utils.coffee"
     "test/mocha.opts"
     .npmignore
-    .travis.yml
     Makefile
     testem.yml
 )
@@ -27,6 +26,7 @@ done
 COPY=(
     "test/index.coffee"
     .gitignore
+    .travis.yml
     bin
     custom.mk
     LICENSE
