@@ -3,6 +3,7 @@ src_files:
 - "./*.coffee"
 - "./bin/*.coffee"
 - "./src/**/*.coffee"
+- "./test/**/*.coffee"
 launchers:
   Mocha:
     command: mocha test
