@@ -28,6 +28,7 @@ COPY=(
     "test/index.coffee"
     .gitignore
     bin
+    custom.mk
     LICENSE
     NOTICE
     NOTICE2
