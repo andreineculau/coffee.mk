@@ -10,6 +10,7 @@ SYMLINK=(
     "test/mocha.opts"
     .npmignore
     .travis.yml
+    Makefile
     testem.yml
 )
 
@@ -28,7 +29,6 @@ COPY=(
     .gitignore
     bin
     LICENSE
-    Makefile
     NOTICE
     NOTICE2
     README.md
