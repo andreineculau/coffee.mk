@@ -9,4 +9,4 @@ module.exports = {
 }
 
 if fs.existsSync './_utils.custom.coffee'
-  _.merge module.exports, require './utils.custom.coffee'
+  _.merge module.exports, require './_utils.custom.coffee'
