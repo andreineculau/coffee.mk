@@ -6,7 +6,7 @@ define coffee-compile
 	@coffee -pc $(input) > $(output)
 endef
 
-COFFEE := $(wildcard *.coffee bin/*.coffee src/**/*.coffee)
+COFFEE := $(wildcard *.coffee bin/**.coffee src/**.coffee)
 JS := $(patsubst src%, lib%, $(COFFEE:.coffee=.js))
 
 # PHONY
