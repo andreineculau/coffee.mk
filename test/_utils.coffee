@@ -1,12 +1,17 @@
 fs = require 'fs'
+path = require 'path'
 _ = require 'lodash'
 chai = require 'chai'
 chai.Assertion.includeStack = true
 
 module.exports = {
-  should: chai.should()
   _
+  assert: chai.assert
+  chai: chai
+  expect: chai.expect
+  should: chai.should()
 }
 
-if fs.existsSync './_utils.custom.coffee'
-  _.merge module.exports, require './_utils.custom.coffee'
+customUtilsFile = path.resolve './test/_utils.custom.coffee'
+if fs.existsSync customUtilsFile
+  _.merge module.exports, require customUtilsFile
