@@ -1,4 +1,4 @@
-# name
+# name [![Build Status][2]][1]
 
 description
 
@@ -27,3 +27,7 @@ SHOULD be self-explanatory
 ## License
 
 [Apache 2.0](LICENSE)
+
+
+  [1]: https://travis-ci.org/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME]
+  [2]: https://travis-ci.org/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME].png
