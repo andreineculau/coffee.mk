@@ -6,7 +6,10 @@ define coffee-compile
 	@coffee -pc $(input) > $(output)
 endef
 
-COFFEE := $(wildcard *.coffee bin/**.coffee src/**.coffee)
+COFFEE_INDEX := $(wildcard *.coffee)
+COFFEE_BIN := $(shell find bin -type f -name '*.coffee' 2>/dev/null)
+COFFEE_SRC := $(shell find src -type f -name '*.coffee' 2>/dev/null)
+COFFEE := $(COFFEE_INDEX) $(COFFEE_BIN) $(COFFEE_SRC)
 JS := $(patsubst src%, lib%, $(COFFEE:.coffee=.js))
 
 # PHONY
