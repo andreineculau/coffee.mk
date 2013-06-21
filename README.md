@@ -3,14 +3,15 @@
 description
 
 
-## Install
+## Install/update
 
-`bash <(curl -s https://raw.github.com/andreineculau/coffee.mk/master/install.sh)`
+Install via `bash <(curl -s https://raw.github.com/andreineculau/coffee.mk/master/install.sh)`
 
-* update `package.json`
-* update `NOTICE`
-* update `NOTICE2`
-* optionally update `.gitignore`
+* fix `package.json`
+* fix `NOTICE`
+* fix `NOTICE2`
+
+Update via `bash <(curl -s https://raw.github.com/andreineculau/coffee.mk/master/install.sh)` and then commit the change in the your repository.
 
 
 ## Usage
@@ -20,7 +21,8 @@ SHOULD be self-explanatory
 
 ## Customization
 
-* create `custom.mk` with your custom make targets
+* update `.gitignore`
+* add your custom make targets to `custom.mk`
 * create `test/_utils.custom.coffee` with your custom test utils
 
 
@@ -29,5 +31,5 @@ SHOULD be self-explanatory
 [Apache 2.0](LICENSE)
 
 
-  [1]: https://travis-ci.org/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME]
-  [2]: https://travis-ci.org/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME].png
+  [1]: https://travis-ci.org/YOUR_GITHUB_USERNAME/YOUR_PROJECT_NAME
+  [2]: https://travis-ci.org/YOUR_GITHUB_USERNAME/YOUR_PROJECT_NAME.png
