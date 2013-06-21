@@ -22,7 +22,7 @@ clean:
 	@rm -f $(JS)
 
 lint:
-	@coffeelint -f ./.coffee.mk/.coffeelint.json $(COFFEE)
+	@coffeelint -f ./.coffeelint.json $(COFFEE)
 
 prepublish: clean lint all
 
