@@ -8,6 +8,7 @@ set -e
 SYMLINK=(
     "test/_utils.coffee"
     "test/mocha.opts"
+    .coffeelint.json
     .npmignore
     Makefile
     testem.yml
