@@ -11,7 +11,7 @@ Install via `bash <(curl -s https://raw.github.com/andreineculau/coffee.mk/maste
 * fix `NOTICE`
 * fix `NOTICE2`
 
-Update via `bash <(curl -s https://raw.github.com/andreineculau/coffee.mk/master/install.sh)` and then commit the change in the your repository.
+Update via `bash <(curl -s https://raw.github.com/andreineculau/coffee.mk/master/install.sh)` and then commit the change in your repository.
 
 
 ## Usage
