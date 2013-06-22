@@ -5,13 +5,19 @@ description
 
 ## Install/update
 
-Install via `bash <(curl -s https://raw.github.com/andreineculau/coffee.mk/master/install.sh)`
+Install via  
+`bash <(curl -s https://raw.github.com/andreineculau/coffee.mk/master/install.sh)`
 
 * fix `package.json`
 * fix `NOTICE`
 * fix `NOTICE2`
 
-Update via `bash <(curl -s https://raw.github.com/andreineculau/coffee.mk/master/install.sh)` and then commit the change in your repository.
+Check for upstream diff via  
+`bash <(curl -s https://raw.github.com/andreineculau/coffee.mk/master/changelog.sh)`.
+
+Update via  
+`bash <(curl -s https://raw.github.com/andreineculau/coffee.mk/master/install.sh)`  
+and then commit the change in your repository.
 
 
 ## Usage
