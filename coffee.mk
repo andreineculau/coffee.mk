@@ -18,7 +18,7 @@ JS := $(patsubst src%, lib%, $(COFFEE:.coffee=.js))
 all: $(JS)
 
 install:
-	[ -d .git ] && git submodule update --init --recursive
+	@[ -d .git ] && git submodule update --init --recursive
 	@npm install
 
 clean:
