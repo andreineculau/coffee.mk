@@ -2,9 +2,5 @@
 -include custom.mk
 
 # Default
-.PHONY: force
-
-%: force
+.DEFAULT:
 	@$(MAKE) -f .coffee.mk/coffee.mk $@
-
-force: ;
