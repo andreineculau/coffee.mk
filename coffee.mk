@@ -6,6 +6,14 @@ define coffee-compile
 	@coffee -pc $(input) > $(output)
 endef
 
+define coffee-compile-shebang
+	@$(eval input := $<)
+	@$(eval output := $@)
+	@mkdir -p `dirname $(output)`
+	@( echo '#!/usr/bin/env node'; coffee -pc $(input) ) > $(output)
+	@chmod +x $(output)
+endef
+
 COFFEE_INDEX := $(wildcard *.coffee)
 COFFEE_BIN := $(shell find bin -type f -name '*.coffee' 2>/dev/null)
 COFFEE_SRC := $(shell find src -type f -name '*.coffee' 2>/dev/null)
@@ -49,9 +57,11 @@ $(JS): $(1)
 
 %.coffee: ;
 
-%.js: %.coffee
-	$(coffee-compile)
+bin/%.js: bin/%.coffee
+	$(coffee-compile-shebang)
 
 lib/%.js: src/%.coffee
 	$(coffee-compile)
 
+%.js: %.coffee
+	$(coffee-compile)
