@@ -3,7 +3,7 @@ path = require 'path'
 _ = require 'lodash'
 chai = require 'chai'
 chai.Assertion.includeStack = true
-existsSync = path.existsSync or fs.existsSync
+existsSync = fs.existsSync or path.existsSync
 
 module.exports = {
   _
