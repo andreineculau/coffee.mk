@@ -28,6 +28,7 @@ COPY=(
     "test/index.coffee"
     .gitignore
     .travis.yml
+    AUTHORS
     bin
     custom.mk
     LICENSE
