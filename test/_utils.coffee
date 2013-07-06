@@ -3,6 +3,7 @@ path = require 'path'
 _ = require 'lodash'
 chai = require 'chai'
 chai.Assertion.includeStack = true
+existsSync = path.existsSync or fs.existsSync
 
 module.exports = {
   _
@@ -13,5 +14,5 @@ module.exports = {
 }
 
 customUtilsFile = path.resolve './test/_utils.custom.coffee'
-if fs.existsSync customUtilsFile
+if existsSync customUtilsFile
   _.merge module.exports, require customUtilsFile
