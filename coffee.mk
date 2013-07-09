@@ -17,6 +17,7 @@ endef
 COFFEE_INDEX := $(wildcard *.coffee)
 COFFEE_BIN := $(shell find bin -type f -name '*.coffee' 2>/dev/null)
 COFFEE_SRC := $(shell find src -type f -name '*.coffee' 2>/dev/null)
+COFFEE_TEST := $(shell find test -type f -name '*.coffee' 2>/dev/null)
 COFFEE := $(COFFEE_INDEX) $(COFFEE_BIN) $(COFFEE_SRC)
 JS := $(patsubst src%, lib%, $(COFFEE:.coffee=.js))
 
@@ -33,7 +34,7 @@ clean:
 	@rm -f $(JS)
 
 lint:
-	@coffeelint -f ./.coffeelint.json $(COFFEE)
+	@coffeelint -f ./.coffeelint.json $(COFFEE) $(COFFEE_TEST)
 
 prepublish: clean lint all
 
