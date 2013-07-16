@@ -7,19 +7,17 @@
     "type": "git",
     "url": "git://github.com/user/repo.git"
   },
-  "licenses": [
-    {
+  "licenses": [{
       "type": "Apache-2.0",
       "url": "http://www.apache.org/licenses/LICENSE-2.0"
-    }
-  ],
+  }],
   "bin" : {},
   "scripts": {
     "prepublish": "make prepublish",
     "test": "make test"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
+  "optionalDependencies": {},
   "devDependencies": {
     "chai": "~1.7.0",
     "coffee-script": "~1.6.3",
@@ -30,6 +28,7 @@
     "testem": "~0.2.98"
   },
   "publishConfig": {
-    "bin": {}
+    "bin": {},
+    "optionalDependencies": {}
   }
 }
