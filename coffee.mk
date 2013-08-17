@@ -41,10 +41,10 @@ prepublish: clean lint all
 test:
 	@mocha --reporter spec test
 
-tap:
+tap: lint
 	@testem ci
 
-testem:
+testem: lint
 	@testem
 
 Makefile:
