@@ -22,7 +22,7 @@ COFFEE := $(COFFEE_INDEX) $(COFFEE_BIN) $(COFFEE_SRC)
 JS := $(patsubst src%, lib%, $(COFFEE:.coffee=.js))
 
 # PHONY
-.PHONY: install clean lint all prepublish test tap testem Makefile custom.mk
+.PHONY: install clean lint all prepublish publish test tap testem Makefile custom.mk
 
 all: $(JS)
 
@@ -37,6 +37,9 @@ lint:
 	@coffeelint -f ./.coffeelint.json $(COFFEE) $(COFFEE_TEST)
 
 prepublish: clean lint all
+
+publish:
+	@npm publish
 
 test:
 	@mocha --reporter spec test
