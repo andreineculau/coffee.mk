@@ -36,16 +36,16 @@ clean:
 lint:
 	@coffeelint -f ./.coffeelint.json $(COFFEE) $(COFFEE_TEST)
 
-prepublish: clean lint all
+prepublish: clean test all
 
 publish:
 	@npm publish
 
-test:
-	@mocha --reporter spec test
-
-tap: lint
+tap:
 	@testem ci
+
+test: lint
+	@mocha --reporter spec test
 
 testem: lint
 	@testem
