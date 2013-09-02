@@ -22,7 +22,7 @@ COFFEE := $(COFFEE_INDEX) $(COFFEE_BIN) $(COFFEE_SRC)
 JS := $(patsubst src%, lib%, $(COFFEE:.coffee=.js))
 
 # PHONY
-.PHONY: install clean lint all prepublish publish test tap testem Makefile custom.mk
+.PHONY: install clean lint all prepublish publish test tap testem help Makefile custom.mk
 
 all: $(JS)
 
@@ -49,6 +49,10 @@ test: lint
 
 testem: lint
 	@testem
+
+# From http://stackoverflow.com/a/15058900
+help:
+	@sh -c "($(MAKE) -f custom.mk -p Makefile; $(MAKE) -f .coffee.mk/coffee.mk -p Makefile) | awk -F':' '/^[a-zA-Z0-9][^\$$#\/\\t=]*:([^=]|$$)/ {split(\$$1,A,/ /);for(i in A)print A[i]}' | grep -v '__\$$' | grep -v 'Makefile' | grep -v 'custom.mk' | grep -v 'make' | sort | uniq"
 
 Makefile:
 	@:
