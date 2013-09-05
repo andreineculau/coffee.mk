@@ -2,16 +2,18 @@
   "name": "",
   "description": "",
   "keywords": [],
-  "version": "0.0.1",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/user/repo.git"
   },
-  "licenses": [{
+  "licenses": [
+    {
       "type": "Apache-2.0",
       "url": "http://www.apache.org/licenses/LICENSE-2.0"
-  }],
-  "bin" : {},
+    }
+  ],
+  "bin": {},
   "scripts": {
     "prepublish": "make prepublish",
     "test": "make test"
