@@ -30,7 +30,7 @@
   },
 
   "line_endings": {
-    "level": "warning",
+    "level": "warn",
     "value": "unix"
   },
 
