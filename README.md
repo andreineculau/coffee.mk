@@ -9,6 +9,7 @@ Install via
 `bash <(curl -s https://raw.github.com/andreineculau/coffee.mk/master/install.sh)`
 
 * fix `package.json`
+* fix `AUTHORS`
 * fix `NOTICE`
 * fix `NOTICE2`
 
@@ -16,7 +17,7 @@ Check for upstream diff via
 `bash <(curl -s https://raw.github.com/andreineculau/coffee.mk/master/changelog.sh)`.
 
 Update via  
-`bash <(curl -s https://raw.github.com/andreineculau/coffee.mk/master/install.sh)`  
+`bash <(curl -s https://raw.github.com/andreineculau/coffee.mk/master/update.sh)`  
 and then commit the change in your repository.
 
 
