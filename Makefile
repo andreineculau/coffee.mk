@@ -1,3 +1,4 @@
+SELF_DIR := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
 # Custom
 -include custom.mk
 
@@ -5,8 +6,8 @@
 PHONY := test
 .PHONY: $(PHONY)
 $(PHONY):
-	@$(MAKE) -f .coffee.mk/coffee.mk $@
+	@$(MAKE) -f $(SELF_DIR)coffee.mk $@
 
 # Default
 .DEFAULT:
-	@$(MAKE) -f .coffee.mk/coffee.mk $@
+	@$(MAKE) -f $(SELF_DIR)coffee.mk $@

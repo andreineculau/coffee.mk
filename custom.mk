@@ -1,4 +1,4 @@
 .PHONY: all
 
 all:
-	@$(MAKE) -f .coffee.mk/coffee.mk $@
+	@$(MAKE) -f .coffee.mk/coffee.mk -C .coffee.mk $@

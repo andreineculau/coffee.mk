@@ -1,3 +1,7 @@
+SELF_DIR := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
+# Util
+-include $(SELF_DIR)util.mk/util.mk
+
 # Setup
 define coffee-compile
 	@$(eval input := $<)
@@ -53,14 +57,15 @@ spec: lint
 testem: lint
 	@testem
 
-# From http://stackoverflow.com/a/15058900
-help:
-	@sh -c "($(MAKE) -f custom.mk -p Makefile; $(MAKE) -f .coffee.mk/coffee.mk -p Makefile) | awk -F':' '/^[a-zA-Z0-9][^\$$#\/\\t=]*:([^=]|$$)/ {split(\$$1,A,/ /);for(i in A)print A[i]}' | grep -v '__\$$' | grep -v 'Makefile' | grep -v 'custom.mk' | grep -v 'make' | sort | uniq"
+help: util-help
 
 Makefile:
 	@:
 
 custom.mk:
+	@:
+
+util.mk/util.mk:
 	@:
 
 # Non PHONY

@@ -1,0 +1,3 @@
+[submodule "util.mk"]
+	path = util.mk
+	url = git://github.com/andreineculau/util.mk.git
