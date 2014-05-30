@@ -49,10 +49,10 @@ tap:
 	@testem ci
 
 test: lint
-	@mocha --reporter min --compilers coffee:coffee-script/register test
+	@mocha --reporter min test
 
 spec: lint
-	@mocha --reporter spec --compilers coffee:coffee-script/register test
+	@mocha --reporter spec test
 
 testem: lint
 	@testem

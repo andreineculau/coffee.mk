@@ -6,7 +6,7 @@ src_files:
 - "./test/**/*.coffee"
 launchers:
   Mocha:
-    command: mocha --compilers coffee:coffee-script/register test
+    command: mocha test
     protocol: tap
 launch_in_dev:
 - Mocha
