@@ -28,12 +28,8 @@ COPY=(
     "test/index.coffee"
     .gitignore
     .travis.yml
-    AUTHORS
     bin
     custom.mk
-    LICENSE
-    NOTICE
-    NOTICE2
     README.md
     index.coffee
     package.json
