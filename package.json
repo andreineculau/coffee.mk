@@ -9,8 +9,8 @@
   },
   "licenses": [
     {
-      "type": "Apache-2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+      "type": "Unlicense",
+      "url": "http://unlicense.org/UNLICENSE"
     }
   ],
   "bin": {},

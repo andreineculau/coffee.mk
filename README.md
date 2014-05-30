@@ -9,9 +9,6 @@ Install via
 `bash <(curl -s https://raw.github.com/andreineculau/coffee.mk/master/install.sh)`
 
 * fix `package.json`
-* fix `AUTHORS`
-* fix `NOTICE`
-* fix `NOTICE2`
 
 Check for upstream diff via  
 `bash <(curl -s https://raw.github.com/andreineculau/coffee.mk/master/changelog.sh)`.
@@ -35,7 +32,7 @@ SHOULD be self-explanatory
 
 ## License
 
-[Apache 2.0](LICENSE)
+[UNLICENSE](LICENSE)
 
 
   [1]: https://travis-ci.org/YOUR_GITHUB_USERNAME/YOUR_PROJECT_NAME
