@@ -30,6 +30,7 @@ COPY=(
     .travis.yml
     bin
     custom.mk
+    LICENSE
     README.md
     index.coffee
     package.json
